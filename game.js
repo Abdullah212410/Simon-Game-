@@ -26,6 +26,7 @@ $(document).click(function () {
     nextSequence();
     started = true;
   }
+      startOver();
 });
 //
 $(".btn").click(function handler() {
@@ -86,4 +87,5 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
+
 
