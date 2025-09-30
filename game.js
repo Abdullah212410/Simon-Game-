@@ -20,14 +20,7 @@ function nextSequence() {
   playSound(randomChosenColour);
   animatePress(randomChosenColour);
 }
-//
-$(document).click(function () {
-  if (!started) {
-    nextSequence();
-    started = true;
-  }
-      startOver();
-});
+
 //
 $(".btn").click(function handler() {
   if (!started) {
@@ -87,5 +80,6 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
+
 
 
