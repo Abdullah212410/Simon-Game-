@@ -21,6 +21,13 @@ function nextSequence() {
   animatePress(randomChosenColour);
 }
 //
+$(document).click(function () {
+  if (!started) {
+    nextSequence();
+    started = true;
+  }
+});
+//
 $(".btn").click(function handler() {
   if (!started) {
     nextSequence();
@@ -79,3 +86,4 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
+
