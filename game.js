@@ -23,10 +23,6 @@ function nextSequence() {
 
 //
 $(".btn").click(function handler() {
-  if (!started) {
-    nextSequence();
-    started = true;
-  }
   let userChosenColour = $(this).attr("id");
   userClickedPattern.push(userChosenColour);
   console.log(userClickedPattern);
@@ -80,6 +76,7 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
+
 
 
 
