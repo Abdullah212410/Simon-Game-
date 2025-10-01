@@ -8,7 +8,6 @@ function nextSequence() {
   userClickedPattern = [];
   level++;
   $("#level-title").text("level " + level);
-
   let randomNumber = Math.floor(Math.random() * 4);
   let randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
@@ -43,7 +42,7 @@ function animatePress(currentColour) {
   }, 100);
 }
 //
-$(document).keypress(function (event) {
+$(document).on("keypress touchstart", function (event) {
   if (!started) {
     nextSequence();
     started = true;
@@ -76,6 +75,7 @@ function startOver() {
   gamePattern = [];
   started = false;
 }
+
 
 
 
